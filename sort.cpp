@@ -3,23 +3,21 @@ using namespace std;
 
 int main(){
 	
-	char back;
-   int n , pilih;
-  menu:
+char back;
+int n , pilih;
+	
+menu:
    cout<<"1.selection sort"<<endl;
    cout<<"2.bubble sort"<<endl;
    cout<<"3.merge sort"<<endl;
    cout<<"PILIHAN ANDA : ";cin>>pilih;
 
-	int a, b, c, simpan;
-    		int data[100];
-  
-  
-   switch (pilih) {
+int a, b, c, simpan;
+int data[100];
+	
+switch (pilih) {
    	
    case 1 : 
-			system ("cls");
- 
   
     cout<<"jumlah angka yang di input : "; cin>>n;
     
@@ -39,4 +37,10 @@ int main(){
         simpan=data[c];
         data[c]=data[a];
         data[a]=simpan;
+    }
+    cout<<"\nsetelah diurutkan akan menjadi : \n";
+    for(a=0;a<n;a++)
+    {
+        cout<<data[a]<<" ";
+        cout<<endl;
     }

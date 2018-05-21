@@ -12,13 +12,14 @@ menu:
    cout<<"3.merge sort"<<endl;
    cout<<"PILIHAN ANDA : ";cin>>pilih;
 
-int a, b, c, simpan;
+int a, b, min, simpan;
 int data[100];
 	
 switch (pilih) {
    	
-   case 1 : 
-  
+	case 1 : 
+		
+ 	 system ("cls");
     cout<<"jumlah angka yang di input : "; cin>>n;
     
 	for(a=0;a<n;a++)
@@ -27,16 +28,17 @@ switch (pilih) {
     }
     for(a=0;a<n-1;a++)
     {
-        for(b=0;b<n;b++)
+	min=a;
+        for(b=a;b<n;b++)
         {
-            if(data[b]<data[c])
+            if(data[min]>data[b])
             {
-          	//ni diisi apa men?
+          	min=b;
             }
         }
-        simpan=data[c];
-        data[c]=data[a];
-        data[a]=simpan;
+        simpan=data[a];
+        data[a]=data[min];
+        data[min]=simpan;
     }
     cout<<"\nsetelah diurutkan akan menjadi : \n";
     for(a=0;a<n;a++)
@@ -46,23 +48,20 @@ switch (pilih) {
     }
   break;
 
-  case 2 :
-  int tmp;
+	case 2 :
+ 
   system ("cls");
   cout<<"jumlah angka yang di input : "; cin>>n;
   for(a=0;a<n;a++){
   	cout<<"Masukkan nilai "<<a+1<<" : ";cin>>data[a];
   }         
   for(a=0; a<n; a++){
-  	for(b=0; b<n; b++){
-        	if(data[b]>data[a]){
+  	for(b=a; b<n; b++){
+        	if(data[a]>data[b]){
             		simpan = data[b];
            		data[b] = data[a];
           		data[a] = simpan;
               	}
-       	 	simpan=data[c];
-        	data[c]=data[a];
-        	data[a]=simpan;
       }
    }
     cout<<"\nsetelah diurutkan akan menjadi : \n";
@@ -72,3 +71,25 @@ switch (pilih) {
     }
    	cout<<endl;
 	break;
+
+	case 3 :
+		//merge sort
+		
+default : cout<<endl;
+			cout<<"error"<<endl;
+}
+
+
+cout<<"back ?  (y/n) ";cin>>back;
+if (back=='y' or back=='Y'){
+		system ("pause");
+		system ("cls");
+	goto menu;	
+
+}else { 
+return 0;
+}
+
+
+return 0;
+}

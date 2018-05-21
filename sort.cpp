@@ -31,7 +31,7 @@ switch (pilih) {
         {
             if(data[b]<data[c])
             {
-          
+          	//ni diisi apa men?
             }
         }
         simpan=data[c];
@@ -44,3 +44,4 @@ switch (pilih) {
         cout<<data[a]<<" ";
         cout<<endl;
     }
+  break;

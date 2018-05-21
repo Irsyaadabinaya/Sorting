@@ -65,3 +65,10 @@ switch (pilih) {
         	data[a]=simpan;
       }
    }
+    cout<<"\nsetelah diurutkan akan menjadi : \n";
+    for(a=0;a<n;a++)
+    {
+        cout<<data[a]<<" "<<endl;
+    }
+   	cout<<endl;
+	break;
